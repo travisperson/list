@@ -8,11 +8,10 @@
 //______________________________________________________________________________
 TestCase::TestCase (std::string caseName)
 {
-    this->caseName_        = caseName;
-    this->failures_        = 0;
-    this->successes_    = 0;
-    this->testCount_    = 0;
-
+    this->caseName_         = caseName;
+    this->failures_         = 0;
+    this->successes_        = 0;
+    this->testCount_        = 0;
 
     std::cout << std::endl;
     std::cout << std::endl;
