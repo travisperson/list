@@ -1,4 +1,4 @@
-#include "Test.hpp"
+#include "Test.h"
 
 //  Name           - TestCase
 //  Description    - Default Constructor
@@ -6,7 +6,7 @@
 //  Preconditions  -
 //  Postconditions -
 //______________________________________________________________________________
-TestCase::TestCase (string caseName)
+TestCase::TestCase (std::string caseName)
 {
     this->caseName_        = caseName;
     this->failures_        = 0;
@@ -14,11 +14,11 @@ TestCase::TestCase (string caseName)
     this->testCount_    = 0;
 
 
-    cout << endl;
-    cout << endl;
-    cout << "=======================================================" << endl;
-    cout << endl;
-    cout << "[" << this->caseName_ << "] - Test Case" << endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "=======================================================" << std::endl;
+    std::cout << std::endl;
+    std::cout << "[" << this->caseName_ << "] - Test Case" << std::endl;
 
 }
 
@@ -39,19 +39,19 @@ TestCase::~TestCase ()
 //  Postconditions -
 //______________________________________________________________________________
 void
-TestCase::test (string testName, string message, int result)
+TestCase::test (std::string testName, std::string message, int result)
 {
     this->testCount_++;
 
     if (result)
     {
         this->successes_++;
-        cout << "   o - [" << testName << "] - " << message << endl;
+        std::cout << "   o - [" << testName << "] - " << message << std::endl;
     }
     else
     {
         this->failures_++;
-        cout << "   x - [" << testName << "] - " << message << endl;
+        std::cout << "   x - [" << testName << "] - " << message << std::endl;
     }
 }
 
@@ -62,19 +62,19 @@ TestCase::test (string testName, string message, int result)
 //  Postconditions -
 //______________________________________________________________________________
 void
-TestCase::test (string testName, int result)
+TestCase::test (std::string testName, int result)
 {
     this->testCount_++;
 
     if (result)
     {
         this->successes_++;
-        cout << "   o - [" << testName << "]" << endl;
+        std::cout << "   o - [" << testName << "]" << std::endl;
     }
     else
     {
         this->failures_++;
-        cout << "   x - [" << testName << "]" << endl;
+        std::cout << "   x - [" << testName << "]" << std::endl;
     }
 }
 
@@ -87,14 +87,14 @@ TestCase::test (string testName, int result)
 void
 TestCase::results ()
 {
-    cout << endl;
-    cout << endl;
-    cout << "Test Case Results [" << this->caseName_ << "]" << endl;
-    cout << "  Successes   - " << this->successes_ << endl;
-    cout << "  Failures    - " << this->failures_  << endl;
-    cout << endl;
-    cout << "Total Tests - "   << this->testCount_ << endl;
-    cout << endl;
-    cout << "=======================================================" << endl;
-    cout << endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "Test Case Results [" << this->caseName_ << "]" << std::endl;
+    std::cout << "  Successes   - " << this->successes_ << std::endl;
+    std::cout << "  Failures    - " << this->failures_  << std::endl;
+    std::cout << std::endl;
+    std::cout << "Total Tests - "   << this->testCount_ << std::endl;
+    std::cout << std::endl;
+    std::cout << "=======================================================" << std::endl;
+    std::cout << std::endl;
 }
