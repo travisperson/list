@@ -1,0 +1,5 @@
+# Block all
+*
+
+# Allow .gitignore
+!.gitignore
